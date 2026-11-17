@@ -1,0 +1,271 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --primary: #245bdb;
+    --dark: #14213d;
+    --muted: #687386;
+    --page: #f5f7fb;
+    --border: #e8edf5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--page);
+    color: var(--dark);
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+/* NAVBAR */
+.portal-navbar {
+    background: #14213d;
+    padding: 16px 0;
+    box-shadow: 0 3px 14px rgba(20, 33, 61, .12);
+}
+
+.navbar-brand {
+    letter-spacing: .8px;
+}
+
+.navbar-brand span {
+    color: #82a8ff;
+}
+
+.nav-link {
+    color: rgba(255,255,255,.78) !important;
+    font-size: .92rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #fff !important;
+}
+
+/* WELCOME SECTION */
+.welcome-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 28px 30px;
+    background: linear-gradient(120deg, #fff, #edf3ff);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+}
+
+.welcome-section h1 {
+    font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+
+.eyebrow {
+    color: var(--primary);
+    font-size: .69rem;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.date-chip {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 10px 15px;
+    color: #526078;
+    font-size: .8rem;
+    white-space: nowrap;
+}
+
+/* SECTION HEADINGS */
+.section-heading {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+/* CARDS */
+.portal-card {
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    box-shadow: 0 5px 18px rgba(27, 47, 87, .045);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.portal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(27, 47, 87, .08);
+}
+
+/* ANNOUNCEMENTS */
+.tag {
+    display: inline-block;
+    border-radius: 6px;
+    padding: 6px 9px;
+    font-size: .65rem;
+    font-weight: 800;
+    letter-spacing: .6px;
+}
+
+.tag-blue {
+    color: #245bdb;
+    background: #eaf0ff;
+}
+
+.tag-green {
+    color: #16845b;
+    background: #e8f8f0;
+}
+
+.text-link {
+    color: var(--primary);
+    font-size: .85rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* PROFILE */
+.avatar {
+    width: 76px;
+    height: 76px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    color: #fff;
+    background: linear-gradient(135deg, #245bdb, #7d9eff);
+    font-size: 1.35rem;
+    font-weight: 800;
+}
+
+.profile-details {
+    border-top: 1px solid var(--border);
+    padding-top: 12px;
+}
+
+.profile-details div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+    font-size: .84rem;
+}
+
+.profile-details span {
+    color: var(--muted);
+}
+
+.profile-details strong {
+    font-weight: 600;
+}
+
+.status {
+    color: #16845b;
+}
+
+/* SUBJECTS */
+.subject-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: #eef3ff;
+    border-radius: 13px;
+    font-size: 1.4rem;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7px;
+    color: var(--muted);
+    font-size: .75rem;
+}
+
+.progress-label strong {
+    color: var(--dark);
+}
+
+.progress {
+    height: 7px;
+    background: #edf0f6;
+    border-radius: 10px;
+}
+
+.progress-bar {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+/* REGISTRATION FORM */
+.form-label {
+    font-size: .86rem;
+    font-weight: 600;
+}
+
+.form-control,
+.form-select {
+    min-height: 46px;
+    border-color: #dfe5ef;
+    border-radius: 9px;
+    font-size: .9rem;
+}
+
+textarea.form-control {
+    min-height: auto;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #7e9ff2;
+    box-shadow: 0 0 0 .2rem rgba(36, 91, 219, .12);
+}
+
+/* BUTTON */
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    border-radius: 9px;
+    font-weight: 600;
+}
+
+.btn-primary:hover {
+    background: #1949ba;
+    border-color: #1949ba;
+}
+
+/* FOOTER */
+.portal-footer {
+    margin-top: 55px;
+    padding: 22px 0;
+    background: #14213d;
+    color: rgba(255,255,255,.7);
+    font-size: .8rem;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 575.98px) {
+
+    .welcome-section {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 22px;
+    }
+
+    .date-chip {
+        white-space: normal;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+    }
+
+    .portal-card .card-body {
+        padding: 1.25rem !important;
+    }
+}
